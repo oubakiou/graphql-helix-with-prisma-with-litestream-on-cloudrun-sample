@@ -1,0 +1,8 @@
+{
+  "generates": {
+    "./schema/resolvers-types.ts": {
+      "schema": "./schema/typeDefs.graphql",
+      "plugins": ["typescript", "typescript-resolvers"]
+    }
+  }
+}

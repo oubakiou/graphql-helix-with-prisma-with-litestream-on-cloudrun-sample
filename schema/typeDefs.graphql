@@ -1,0 +1,23 @@
+"""
+Query
+"""
+type Query {
+  status(id: ID!): Status
+  statuses: [Status]!
+}
+
+"""
+Mutation
+"""
+type Mutation {
+  createStatus(body: String!): Status
+}
+
+"""
+つぶやき
+"""
+type Status {
+  id: ID!
+  body: String!
+  createdAt: String!
+}

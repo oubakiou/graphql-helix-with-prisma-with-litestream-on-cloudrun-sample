@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "import"],
+  "rules": {
+    "import/order": ["error", { "alphabetize": { "order": "asc" } }]
+  },
+  "overrides": [
+    {
+      "files": ["./schema/**/*.graphql"],
+      "parserOptions": {
+        "schema": "./schema/**/*.graphql"
+      },
+      "extends": "plugin:@graphql-eslint/schema-recommended"
+    }
+  ]
+}
